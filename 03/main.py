@@ -20,7 +20,6 @@ def is_symbol(character):
 def has_symbol_neighbour(matrix, row_number, column_number):
     total_number_of_rows = len(matrix)
     total_number_of_columns = len(matrix[row_number])
-    # print(total_number_of_columns, matrix[row_number])
 
     rows_to_check = range(
         max(row_number - 1, 0), min(row_number + 1, total_number_of_rows - 1) + 1
@@ -30,14 +29,9 @@ def has_symbol_neighbour(matrix, row_number, column_number):
         min(column_number + 1, total_number_of_columns - 1) + 1,
     )
 
-    # print(rows_to_check, columns_to_check)
-
     at_least_one_symbol_neighbour = False
     for row in rows_to_check:
-        # print(row, columns_to_check)
         for column in columns_to_check:
-            # print(column)
-            # print(f"Checking {row},{column} {matrix[row][column]}")
             if row == row_number and column == column_number:
                 continue
             if is_symbol(matrix[row][column]):
@@ -47,10 +41,6 @@ def has_symbol_neighbour(matrix, row_number, column_number):
 
 
 def problem_1(data):
-    # has_symbol_neighbour(data, 0, 0)
-    # has_symbol_neighbour(data, 5, 5)
-    # has_symbol_neighbour(data, len(data) - 1, len(data[0]) - 1)
-
     current_number_string = ""
     has_symbol_neighbour_ = False
     numbers = []
