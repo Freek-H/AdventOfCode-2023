@@ -24,11 +24,11 @@ def problem_2(data):
 def main():
     data = read_file()
 
-    solution_1 = problem_1(data)
-    print(f"Solution to problem 1: {solution_1}")
+    answer_1 = problem_1(data)
+    print(f"Solution to problem 1: {answer_1}")
 
-    solution_2 = problem_2(data)
-    print(f"Solution to problem 2: {solution_2}")
+    answer_2 = problem_2(data)
+    print(f"Solution to problem 2: {answer_2}")
 
 
 if __name__ == "__main__":
