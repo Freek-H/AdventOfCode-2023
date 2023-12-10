@@ -14,7 +14,7 @@ def read_file():
 def problem_1(data):
     limits = dict(red=12, green=13, blue=14)
 
-    counter = 0
+    answer = 0
     for one_game_name, one_game_sets in data.items():
         valid = True
         for one_set in one_game_sets:
@@ -23,9 +23,9 @@ def problem_1(data):
                     valid = False
                     break
         if valid:
-            counter += int(one_game_name.split()[-1])
+            answer += int(one_game_name.split()[-1])
 
-    return counter
+    return answer
 
 
 def problem_2(data):
@@ -50,11 +50,11 @@ def main():
 
         data[game_name] = dict_sets
 
-    solution_1 = problem_1(data)
-    print(f"Solution to problem 1: {solution_1}")
+    answer_1 = problem_1(data)
+    print(f"Solution to problem 1: {answer_1}")
 
-    solution_2 = problem_2(data)
-    print(f"Solution to problem 2: {solution_2}")
+    answer_2 = problem_2(data)
+    print(f"Solution to problem 2: {answer_2}")
 
 
 if __name__ == "__main__":
