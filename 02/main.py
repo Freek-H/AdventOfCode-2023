@@ -29,7 +29,23 @@ def problem_1(data):
 
 
 def problem_2(data):
-    pass
+    colours = ["red", "green", "blue"]
+
+    answer = 0
+    for one_game_sets in data.values():
+        minimum_amounts = {one_colour: 0 for one_colour in colours}
+        for one_set in one_game_sets:
+            for colour, amount in one_set.items():
+                if amount > minimum_amounts[colour]:
+                    minimum_amounts[colour] = amount
+
+        power = 1
+        for one_minimum in minimum_amounts.values():
+            power *= one_minimum
+
+        answer += power
+
+    return answer
 
 
 def main():
